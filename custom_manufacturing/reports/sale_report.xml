@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sale_order">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h2>Sales Order</h2>
+                <p><strong>Order Reference:</strong> <span t-field="o.name"/></p>
+                <p><strong>Customer:</strong> <span t-field="o.partner_id.name"/></p>
+                <p><strong>Order Date:</strong> <span t-field="o.date_order"/></p>
+                <p><strong>Total:</strong> <span t-field="o.amount_total"/></p>
+            </div>
+        </t>
+    </template>
+</odoo>

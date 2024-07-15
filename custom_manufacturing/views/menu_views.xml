@@ -1,0 +1,61 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="custom_manufacturing_root" name="Manufacturing" sequence="1"/>
+    <menuitem id="custom_manufacturing_menu" name="Manufacturing" parent="custom_manufacturing_root" sequence="1"/>
+    <menuitem id="custom_manufacturing_production_menu" name="Production Orders" parent="custom_manufacturing_menu" action="action_production_order"/>
+    <menuitem id="custom_manufacturing_inventory_menu" name="Inventory" parent="custom_manufacturing_menu" action="action_inventory"/>
+    <menuitem id="custom_manufacturing_quality_menu" name="Quality Checks" parent="custom_manufacturing_menu" action="action_quality_check"/>
+    <menuitem id="custom_manufacturing_dashboard_menu" name="Dashboard" parent="custom_manufacturing_menu" action="action_dashboard"/>
+</odoo> -->
+
+
+
+<odoo>
+    <data>
+        <!-- Main Menu for Custom Manufacturing -->
+        <menuitem id="menu_custom_manufacturing_root" name="Custom Manufacturing" sequence="1"/>
+
+        <!-- Submenus -->
+        <menuitem id="custom_manufacturing_dashboard" name="Dashboard" parent="menu_custom_manufacturing_root" sequence="10"/>
+        <menuitem id="custom_manufacturing_inventory" name="Inventory" parent="menu_custom_manufacturing_root" sequence="20"/>
+        <menuitem id="custom_manufacturing_orders" name="Orders" parent="menu_custom_manufacturing_root" sequence="30"/>
+        <menuitem id="custom_manufacturing_production" name="Production" parent="menu_custom_manufacturing_root" sequence="40"/>
+        <menuitem id="custom_manufacturing_quality" name="Quality" parent="menu_custom_manufacturing_root" sequence="50"/>
+
+        <!-- Actions -->
+        <!-- <record id="action_custom_manufacturing_dashboard" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record> -->
+
+        <!-- <record id="action_custom_manufacturing_inventory" model="ir.actions.act_window">
+            <field name="name">Inventory</field>
+            <field name="res_model">custom_manufacturing.stock_inventory</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record> -->
+
+        <!-- <record id="action_custom_manufacturing_orders" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record> -->
+
+        <!-- <record id="action_custom_manufacturing_production" model="ir.actions.act_window">
+            <field name="name">Production</field>
+            <field name="res_model">custom_manufacturing.production_order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record> -->
+
+        <!-- <record id="action_custom_manufacturing_quality" model="ir.actions.act_window">
+            <field name="name">Quality</field>
+            <field name="res_model">custom_manufacturing.quality_check</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record> -->
+    </data>
+</odoo>

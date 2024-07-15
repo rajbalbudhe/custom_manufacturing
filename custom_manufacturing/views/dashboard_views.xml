@@ -1,0 +1,86 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_dashboard_form" model="ir.ui.view">
+            <field name="name">dashboard.form</field>
+            <field name="model">custom_manufacturing.dashboard</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard">
+                    <sheet>
+                        <graph string="Production Efficiency" type="bar">
+                            <field name="production_order_id"/>
+                            <field name="quantity"/>
+                        </graph>
+                        <graph string="Inventory Levels" type="bar">
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                        </graph>
+                        <graph string="Sales Orders" type="line">
+                            <field name="sale_order_id"/>
+                            <field name="amount_total"/>
+                        </graph>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_dashboard" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_dashboard" 
+                  name="Dashboard" 
+                  parent="custom_manufacturing_dashboard" 
+                  action="action_custom_manufacturing_dashboard"
+                  sequence="10"
+        />
+
+
+    </data>
+</odoo> -->
+
+
+<odoo>
+    <data>
+        <record id="view_dashboard_form" model="ir.ui.view">
+            <field name="name">dashboard.form</field>
+            <field name="model">custom_manufacturing.dashboard</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard">
+                    <sheet>
+                        <graph string="Production Efficiency" type="bar">
+                            <field name="production_order_id"/>
+                            <field name="quantity"/>
+                        </graph>
+                        <graph string="Inventory Levels" type="bar">
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                        </graph>
+                        <graph string="Sales Orders" type="line">
+                            <field name="sale_order_id"/>
+                            <field name="amount_total"/>
+                        </graph>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_dashboard" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">custom_manufacturing.dashboard</field> <!-- Corrected model name here -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_dashboard" 
+                  name="Dashboard" 
+                  parent="menu_custom_manufacturing_root"  
+                  action="action_custom_manufacturing_dashboard"
+                  sequence="10"
+        />
+
+    </data>
+</odoo>

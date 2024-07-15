@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_quality_check">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h2>Quality Check</h2>
+                <p><strong>Check Reference:</strong> <span t-field="o.name"/></p>
+                <p><strong>Product:</strong> <span t-field="o.product_id.name"/></p>
+                <p><strong>Result:</strong> <span t-field="o.result"/></p>
+            </div>
+        </t>
+    </template>
+</odoo>

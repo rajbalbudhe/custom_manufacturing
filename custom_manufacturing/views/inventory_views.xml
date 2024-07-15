@@ -1,0 +1,113 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_stock_inventory_form" model="ir.ui.view">
+            <field name="name">stock.inventory.form</field>
+            <field name="model">custom_manufacturing.stock_inventory</field>
+            <field name="arch" type="xml">
+                <form string="Stock Inventory">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="location_id"/>
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+                        </group>
+                        <footer>
+                            <button string="Confirm" type="object" name="action_confirm" class="btn-primary" states="draft"/>
+                            <button string="Validate" type="object" name="action_validate" class="btn-success" states="confirmed"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_stock_inventory_tree" model="ir.ui.view">
+            <field name="name">stock.inventory.tree</field>
+            <field name="model">custom_manufacturing.stock_inventory</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Inventory">
+                    <field name="name"/>
+                    <field name="location_id"/>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_inventory" model="ir.actions.act_window">
+            <field name="name">Inventory</field>
+            <field name="res_model">custom_manufacturing.stock_inventory</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_inventory" 
+                  name="Inventory" 
+                  parent="custom_manufacturing_inventory" 
+                  action="action_custom_manufacturing_inventory"
+                  sequence="20"
+        />
+
+        
+    </data>
+</odoo> -->
+
+
+<odoo>
+    <data>
+        <record id="view_stock_inventory_form" model="ir.ui.view">
+            <field name="name">stock.inventory.form</field>
+            <field name="model">custom_manufacturing.stock_inventory</field>
+            <field name="arch" type="xml">
+                <form string="Stock Inventory">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="location_id"/>
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,done"/>
+                        </group>
+                        <footer>
+                            <button string="Confirm" type="object" name="action_confirm" class="btn-primary" groups="base.group_user"/>
+                            <button string="Validate" type="object" name="action_validate" class="btn-success" groups="base.group_user"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_stock_inventory_tree" model="ir.ui.view">
+            <field name="name">stock.inventory.tree</field>
+            <field name="model">custom_manufacturing.stock_inventory</field>
+            <field name="arch" type="xml">
+                <tree string="Stock Inventory">
+                    <field name="name"/>
+                    <field name="location_id"/>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_inventory" model="ir.actions.act_window">
+            <field name="name">Inventory</field>
+            <field name="res_model">custom_manufacturing.stock_inventory</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_inventory" 
+                  name="Inventory" 
+                  parent="custom_manufacturing_inventory" 
+                  action="action_custom_manufacturing_inventory"
+                  sequence="20"
+        />
+
+        
+    </data>
+</odoo>

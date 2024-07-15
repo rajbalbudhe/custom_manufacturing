@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_production_order">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <h2>Production Order</h2>
+                <p><strong>Order Reference:</strong> <span t-field="o.name"/></p>
+                <p><strong>Product:</strong> <span t-field="o.product_id.name"/></p>
+                <p><strong>Quantity:</strong> <span t-field="o.quantity"/></p>
+                <p><strong>Status:</strong> <span t-field="o.state"/></p>
+            </div>
+        </t>
+    </template>
+</odoo>
+
+
+               

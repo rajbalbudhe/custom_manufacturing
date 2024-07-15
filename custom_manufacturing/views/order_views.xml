@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sale_order_form_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <sheet>
+                    <group name="sales_information" position="after">
+                        <group string="Production Orders">
+                            <field name="production_order_ids"/>
+                        </group>
+                    </group>
+                </sheet>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_orders" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+        
+        <menuitem id="menu_custom_manufacturing_orders" 
+                  name="Orders" 
+                  parent="custom_manufacturing_orders" 
+                  action="action_custom_manufacturing_orders"
+                  sequence="30"
+        />
+    </data>
+</odoo>

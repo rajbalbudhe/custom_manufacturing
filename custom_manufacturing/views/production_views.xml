@@ -1,0 +1,115 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_production_order_form" model="ir.ui.view">
+            <field name="name">production.order.form</field>
+            <field name="model">custom_manufacturing.production_order</field>
+            <field name="arch" type="xml">
+                <form string="Production Order">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,in_progress,done"/>
+                            <field name="sale_order_id"/>
+                            <field name="invoice_id"/>
+                        </group>
+                        <footer>
+                            <button string="Confirm" type="object" name="action_confirm" class="btn-primary" states="draft"/>
+                            <button string="Start Production" type="object" name="action_start_production" class="btn-secondary" states="confirmed"/>
+                            <button string="Complete Production" type="object" name="action_complete_production" class="btn-success" states="in_progress"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_production_order_tree" model="ir.ui.view">
+            <field name="name">production.order.tree</field>
+            <field name="model">custom_manufacturing.production_order</field>
+            <field name="arch" type="xml">
+                <tree string="Production Orders">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_production" model="ir.actions.act_window">
+            <field name="name">Production</field>
+            <field name="res_model">custom_manufacturing.production_order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_production" 
+                  name="Production" 
+                  parent="custom_manufacturing_production" 
+                  action="action_custom_manufacturing_production"
+                  sequence="40"
+        />
+
+        
+    </data>
+</odoo> -->
+
+
+
+<odoo>
+    <data>
+        <record id="view_production_order_form" model="ir.ui.view">
+            <field name="name">production.order.form</field>
+            <field name="model">custom_manufacturing.production_order</field>
+            <field name="arch" type="xml">
+                <form string="Production Order">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                            <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,in_progress,done"/>
+                            <field name="sale_order_id"/>
+                            <field name="invoice_id"/>
+                        </group>
+                        <footer>
+                            <button string="Confirm" type="object" name="action_confirm" class="btn-primary" groups="base.group_user"/>
+                            <button string="Start Production" type="object" name="action_start_production" class="btn-secondary" groups="base.group_user"/>
+                            <button string="Complete Production" type="object" name="action_complete_production" class="btn-success" groups="base.group_user"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_production_order_tree" model="ir.ui.view">
+            <field name="name">production.order.tree</field>
+            <field name="model">custom_manufacturing.production_order</field>
+            <field name="arch" type="xml">
+                <tree string="Production Orders">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_production" model="ir.actions.act_window">
+            <field name="name">Production Orders</field>
+            <field name="res_model">custom_manufacturing.production_order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_production"
+                  name="Production Orders"
+                  parent="menu_custom_manufacturing_root" 
+                  action="action_custom_manufacturing_production"
+                  sequence="40"
+        />
+
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_quality_check_form" model="ir.ui.view">
+            <field name="name">quality.check.form</field>
+            <field name="model">custom_manufacturing.quality_check</field>
+            <field name="arch" type="xml">
+                <form string="Quality Check">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="product_id"/>
+                            <field name="result"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_quality_check_tree" model="ir.ui.view">
+            <field name="name">quality.check.tree</field>
+            <field name="model">custom_manufacturing.quality_check</field>
+            <field name="arch" type="xml">
+                <tree string="Quality Checks">
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="result"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_custom_manufacturing_quality" model="ir.actions.act_window">
+            <field name="name">Quality</field>
+            <field name="res_model">custom_manufacturing.quality_check</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_custom_manufacturing_quality" 
+                  name="Quality" 
+                  parent="custom_manufacturing_quality" 
+                  action="action_custom_manufacturing_quality"
+                  sequence="50"
+        />
+
+
+    </data>
+</odoo>

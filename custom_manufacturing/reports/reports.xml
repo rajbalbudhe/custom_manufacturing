@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_production_order"
+            model="custom_manufacturing.production_order"
+            string="Production Order Report"
+            report_type="qweb-pdf"
+            file="custom_manufacturing.report_production_order"
+            name="custom_manufacturing.report_production_order"
+        />
+        <report
+            id="report_inventory"
+            model="custom_manufacturing.stock_inventory"
+            string="Inventory Report"
+            report_type="qweb-pdf"
+            file="custom_manufacturing.report_inventory"
+            name="custom_manufacturing.report_inventory"
+        />
+        <report
+            id="report_sale_order"
+            model="sale.order"
+            string="Sales Order Report"
+            report_type="qweb-pdf"
+            file="custom_manufacturing.report_sale_order"
+            name="custom_manufacturing.report_sale_order"
+        />
+        <report
+            id="report_quality_check"
+            model="custom_manufacturing.quality_check"
+            string="Quality Check Report"
+            report_type="qweb-pdf"
+            file="custom_manufacturing.report_quality_check"
+            name="custom_manufacturing.report_quality_check"
+        />
+    </data>
+</odoo>
