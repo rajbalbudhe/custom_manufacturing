@@ -16,11 +16,11 @@
         <menuitem id="menu_custom_manufacturing_root" name="Custom Manufacturing" sequence="1"/>
 
         <!-- Submenus -->
-        <menuitem id="custom_manufacturing_dashboard" name="Dashboard" parent="menu_custom_manufacturing_root" sequence="10"/>
-        <menuitem id="custom_manufacturing_inventory" name="Inventory" parent="menu_custom_manufacturing_root" sequence="20"/>
-        <menuitem id="custom_manufacturing_orders" name="Orders" parent="menu_custom_manufacturing_root" sequence="30"/>
-        <menuitem id="custom_manufacturing_production" name="Production" parent="menu_custom_manufacturing_root" sequence="40"/>
-        <menuitem id="custom_manufacturing_quality" name="Quality" parent="menu_custom_manufacturing_root" sequence="50"/>
+        <menuitem id="custom_manufacturing_orders" name="Orders" parent="menu_custom_manufacturing_root" sequence="10"/>
+        <menuitem id="custom_manufacturing_production" name="Production" parent="menu_custom_manufacturing_root" sequence="20"/>
+        <menuitem id="custom_manufacturing_inventory" name="Inventory" parent="menu_custom_manufacturing_root" sequence="30"/>
+        <menuitem id="custom_manufacturing_quality" name="Quality" parent="menu_custom_manufacturing_root" sequence="40"/>
+        <menuitem id="custom_manufacturing_dashboard" name="Dashboard" parent="menu_custom_manufacturing_root" sequence="50"/>
 
         <!-- Actions -->
         <!-- <record id="action_custom_manufacturing_dashboard" model="ir.actions.act_window">
